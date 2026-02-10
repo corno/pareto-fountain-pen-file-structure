@@ -1,0 +1,66 @@
+
+import * as _p from 'pareto-core/dist/command'
+import * as _pt from 'pareto-core/dist/assign'
+import * as _pi from 'pareto-core/dist/interface'
+import _p_change_context from 'pareto-core/dist/_p_change_context'
+
+import * as signatures from "../../../interface/signatures"
+
+//data types
+import * as d_write_to_directory from "../../../interface/to_be_generated/write_to_dictionary"
+
+//dependencies
+import * as t_path_to_path from "pareto-resources/dist/implementation/manual/schemas/path/transformers/path"
+import { replace_space_in_context_path } from "../transformers/path/path"
+
+
+export const $$: signatures.commands.write_to_directory = _p.command_procedure(
+    ($p, $cr, $qr) => [
+        _p.if_.direct(
+            $p['remove before creating'],
+            [
+                $cr.remove.execute(
+                    {
+                        'path': $p.generic['escape spaces in path']
+                            ? replace_space_in_context_path($p.path)
+                            : $p.path,
+                        'error if not exists': false
+                    },
+                    ($) => ['remove', $],
+                )
+            ]
+        ),
+        _p.dictionaryx.parallel(
+            $p.directory,
+            ($, id) => [
+                _p_change_context($, ($): _pi.Command_Promise<d_write_to_directory.Error__nodes> => {
+                    const node_path = t_path_to_path.extend_node_path($p.path, { 'addition': id })
+                    switch ($[0]) {
+                        case 'file': return _pt.ss($, ($) => $cr['write to_file'].execute(
+                            {
+                                'paragraph': $,
+                                'directory path': $p.path,
+                                'filename': id,
+                                'generic': $p.generic,
+                            },
+                            ($): d_write_to_directory.Error__nodes => ['file', $],
+                        ))
+                        case 'directory': return _pt.ss($, ($) => $$($cr, $qr).execute(
+                            {
+                                'directory': $,
+                                'path': $p.generic['escape spaces in path']
+                                    ? replace_space_in_context_path(node_path)
+                                    : node_path,
+                                'remove before creating': false,
+                                'generic': $p.generic
+                            },
+                            ($): d_write_to_directory.Error__nodes => ['directory', $],
+                        ))
+                        default: return _pt.au($[0])
+                    }
+                }),
+            ],
+            ($): d_write_to_directory.Error => ['nodes', $]
+        )
+    ]
+)
