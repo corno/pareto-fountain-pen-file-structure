@@ -3,7 +3,7 @@ import * as d_write_file from "pareto-resources/dist/interface/generated/liana/s
 import * as d_make_directory from "pareto-resources/dist/interface/generated/liana/schemas/make_directory/data"
 import * as d_fp_block from "pareto-fountain-pen/dist/interface/generated/liana/schemas/prose/data"
 import * as d_path from "pareto-resources/dist/interface/generated/liana/schemas/path/data"
-import * as d_fp_prose_serialize from "pareto-fountain-pen/dist/interface/to_be_generated/block_serialize"
+import * as d_fp_prose_serialize from "pareto-fountain-pen/dist/interface/to_be_generated/prose_serialize"
 
 export type Error =
     | ['make directory', d_make_directory.Error]

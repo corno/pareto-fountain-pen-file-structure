@@ -12,7 +12,7 @@ import * as d_write_to_file from "../../../interface/to_be_generated/write_to_fi
 
 //dependencies
 import * as t_prose_2_lines from "pareto-fountain-pen/dist/implementation/manual/transformers/prose/lines"
-import * as t_path_to_path from "pareto-resources/dist/implementation/manual/schemas/path/transformers/path"
+import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/path/path"
 import { replace_space_in_context_path } from "../transformers/path/path"
 
 export const $$: signatures.commands.write_to_file = _p.command_procedure(

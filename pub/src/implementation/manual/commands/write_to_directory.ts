@@ -10,7 +10,7 @@ import * as signatures from "../../../interface/signatures"
 import * as d_write_to_directory from "../../../interface/to_be_generated/write_to_dictionary"
 
 //dependencies
-import * as t_path_to_path from "pareto-resources/dist/implementation/manual/schemas/path/transformers/path"
+import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/path/path"
 import { replace_space_in_context_path } from "../transformers/path/path"
 
 
