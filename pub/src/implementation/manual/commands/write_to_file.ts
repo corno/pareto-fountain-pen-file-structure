@@ -30,7 +30,7 @@ export const $$: signatures.commands.write_to_file = _p.command_procedure(
                         : $,
                 ),
                 'data': _pt.list.from.list(
-                    t_prose_2_lines.Paragraph($p.paragraph, { 'indentation': $p.generic.indentation }).__l_map(($) => $ + $p.generic.newline),
+                    t_prose_2_lines.Paragraph($p.paragraph, { 'indentation': $p.generic['prose serialize'].indentation }).__l_map(($) => $ + $p.generic['prose serialize'].newline),
                 ).flatten(
                     ($) => _p_list_from_text($, ($) => $),
                 )
