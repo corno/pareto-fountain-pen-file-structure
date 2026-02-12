@@ -27,6 +27,6 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "pareto-resources": "^0.2.49"
+    "pareto-resources": "^0.2.50"
   }
 }
