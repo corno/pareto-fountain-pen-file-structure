@@ -33,7 +33,6 @@ export namespace commands {
     export type write_to_file = _pi.Command_Procedure<
         resources.commands.write_to_file,
         {
-            'make directory': resources_pareto.commands.make_directory
             'write file': resources_pareto.commands.write_file
         },
         null

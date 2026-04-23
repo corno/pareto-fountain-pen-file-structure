@@ -13,20 +13,16 @@ import * as d_write_to_file from "../../../interface/to_be_generated/write_to_fi
 //dependencies
 import * as t_prose_2_lines from "pareto-fountain-pen/dist/implementation/manual/transformers/prose/lines"
 import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/path/path"
-import { replace_space_in_context_path } from "../transformers/path/path"
+import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
 export const $$: signatures.commands.write_to_file = _p.command_procedure(
     ($p, $cr) => [
-        $cr['make directory'].execute(
-            $p['directory path'],
-            ($): d_write_to_file.Error => ['make directory', $],
-        ),
         $cr['write file'].execute(
             {
                 'path': _p_change_context(
                     t_path_to_path.extend_node_path($p['directory path'], { 'addition': $p.filename }),
                     ($) => $p.generic['escape spaces in path']
-                        ? replace_space_in_context_path($)
+                        ? t_path_to_escaped_path.Node_path($)
                         : $,
                 ),
                 'data': _pt.list.from.list(

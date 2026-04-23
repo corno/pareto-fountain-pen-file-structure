@@ -11,7 +11,7 @@ import * as d_write_to_directory from "../../../interface/to_be_generated/write_
 
 //dependencies
 import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/path/path"
-import { replace_space_in_context_path } from "../transformers/path/path"
+import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
 
 export const $$: signatures.commands.write_to_directory = _p.command_procedure(
@@ -22,7 +22,7 @@ export const $$: signatures.commands.write_to_directory = _p.command_procedure(
                 $cr.remove.execute(
                     {
                         'path': $p.generic['escape spaces in path']
-                            ? replace_space_in_context_path($p.path)
+                            ? t_path_to_escaped_path.Node_path($p.path)
                             : $p.path,
                         'error if not exists': false
                     },
@@ -49,7 +49,7 @@ export const $$: signatures.commands.write_to_directory = _p.command_procedure(
                             {
                                 'directory': $,
                                 'path': $p.generic['escape spaces in path']
-                                    ? replace_space_in_context_path(node_path)
+                                    ? t_path_to_escaped_path.Node_path(node_path)
                                     : node_path,
                                 'remove before creating': false,
                                 'generic': $p.generic
