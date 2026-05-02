@@ -20,7 +20,7 @@ export const $$: signatures.commands.write_to_file = _p.command_procedure(
         $cr['write file'].execute(
             {
                 'path': _p_change_context(
-                    t_path_to_path.extend_node_path($p['directory path'], { 'addition': $p.filename }),
+                    t_path_to_path.deprecated_extend_node_path($p['directory path'], { 'addition': $p.filename }),
                     ($) => $p.generic['escape spaces in path']
                         ? t_path_to_escaped_path.Node_path($)
                         : $,
