@@ -21,9 +21,11 @@ export const $$: signatures.commands.write_to_directory = _p.command_procedure(
             [
                 $cr.remove.execute(
                     {
-                        'path': $p.generic['escape spaces in path']
-                            ? t_path_to_escaped_path.Node_path($p.path)
-                            : $p.path,
+                        'path': t_path_to_path.deprecated_node_path_to_context_path(
+                            $p.generic['escape spaces in path']
+                                ? t_path_to_escaped_path.Node_path($p.path)
+                                : $p.path
+                        ),
                         'error if not exists': false
                     },
                     ($) => ['remove', $],
