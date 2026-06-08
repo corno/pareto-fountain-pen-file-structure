@@ -15,7 +15,7 @@ import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
 
 export const $$: signatures.commands.write_to_directory = _p.command_procedure(
-    ($p, $cr, $qr) => [
+    ($p, $cr, $qr, $x) => [
         _p.if_.direct(
             $p['remove before creating'],
             [
@@ -47,7 +47,7 @@ export const $$: signatures.commands.write_to_directory = _p.command_procedure(
                             },
                             ($): d_write_to_directory.Error__nodes => ['file', $],
                         ))
-                        case 'directory': return _pt.ss($, ($) => $$($cr, $qr).execute(
+                        case 'directory': return _pt.ss($, ($) => $$($cr, $qr, $x).execute(
                             {
                                 'directory': $,
                                 'path': $p.generic['escape spaces in path']

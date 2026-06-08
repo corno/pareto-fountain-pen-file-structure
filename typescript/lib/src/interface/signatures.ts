@@ -10,6 +10,7 @@ export namespace commands {
         {
             'log error': resources_pareto.stream.commands.log_error
         },
+        null,
         null
     >
 
@@ -18,6 +19,7 @@ export namespace commands {
         {
             'log': resources_pareto.stream.commands.log
         },
+        null,
         null
     >
 
@@ -27,6 +29,7 @@ export namespace commands {
             'remove': resources_pareto.filesystem_sandboxed.commands.remove,
             'write to_file': resources.commands.write_to_file
         },
+        null,
         null
     >
 
@@ -35,6 +38,7 @@ export namespace commands {
         {
             'write file': resources_pareto.filesystem_sandboxed.commands.write_file
         },
+        null,
         null
     >
 
