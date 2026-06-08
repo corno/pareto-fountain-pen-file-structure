@@ -5,7 +5,7 @@ import _p_list_build_deprecated from 'pareto-core/dist/_p_list_build_deprecated'
 import _p_text_from_list from 'pareto-core/dist/_p_text_from_list'
 
 //data types
-import * as d_path from "pareto-resources/dist/interface/generated/liana/schemas/path/data"
+import * as d_path from "pareto-resources/dist/interface/generated/liana/schemas/fs_unrestricted_path/data"
 import * as d_out from "pareto-fountain-pen/dist/interface/generated/liana/schemas/list_of_characters/data"
 
 

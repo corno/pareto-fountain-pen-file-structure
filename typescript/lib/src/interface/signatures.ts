@@ -8,7 +8,7 @@ export namespace commands {
     export type console_error = _pi.Command_Procedure<
         resources.commands.console_error,
         {
-            'log error': resources_pareto.commands.log_error
+            'log error': resources_pareto.commands.stream_log_error
         },
         null
     >
@@ -16,7 +16,7 @@ export namespace commands {
     export type console_log = _pi.Command_Procedure<
         resources.commands.console_log,
         {
-            'log': resources_pareto.commands.log
+            'log': resources_pareto.commands.stream_log
         },
         null
     >
@@ -24,7 +24,7 @@ export namespace commands {
     export type write_to_directory = _pi.Command_Procedure<
         resources.commands.write_to_directory,
         {
-            'remove': resources_pareto.commands.remove
+            'remove': resources_pareto.commands.fs_unrestricted_remove
             'write to_file': resources.commands.write_to_file
         },
         null
@@ -33,7 +33,7 @@ export namespace commands {
     export type write_to_file = _pi.Command_Procedure<
         resources.commands.write_to_file,
         {
-            'write file': resources_pareto.commands.write_file
+            'write file': resources_pareto.commands.fs_unrestricted_write_file
         },
         null
     >
