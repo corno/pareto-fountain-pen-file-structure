@@ -27,7 +27,7 @@ export namespace commands {
         resources.commands.write_to_directory,
         {
             'remove': resources_pareto.filesystem_sandboxed.commands.remove,
-            'write to_file': resources.commands.write_to_file
+            'write to file': resources.commands.write_to_file
         },
         null,
         null

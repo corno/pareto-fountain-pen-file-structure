@@ -38,7 +38,7 @@ export const $$: signatures.commands.write_to_directory = _p.command_procedure(
                 _p_change_context($, ($): _pi.Command_Promise<d_write_to_directory.Error__nodes> => {
                     const node_path = t_path_to_path.deprecated_extend_node_path($p.path, { 'addition': id })
                     switch ($[0]) {
-                        case 'file': return _pt.ss($, ($) => $cr['write to_file'].execute(
+                        case 'file': return _pt.ss($, ($) => $cr['write to file'].execute(
                             {
                                 'paragraph': $,
                                 'directory path': $p.path,
