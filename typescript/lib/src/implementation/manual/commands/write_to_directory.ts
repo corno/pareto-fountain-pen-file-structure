@@ -10,7 +10,7 @@ import * as signatures from "../../../interface/signatures"
 import * as d_write_to_directory from "../../../interface/to_be_generated/write_to_dictionary"
 
 //dependencies
-import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/unrestricted_path/unrestricted_path"
+import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/sandboxed_path/sandboxed_path"
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
 

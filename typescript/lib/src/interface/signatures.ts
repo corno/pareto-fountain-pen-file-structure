@@ -24,7 +24,7 @@ export namespace commands {
     export type write_to_directory = _pi.Command_Procedure<
         resources.commands.write_to_directory,
         {
-            'remove': resources_pareto.filesystem_unrestricted.commands.remove,
+            'remove': resources_pareto.filesystem_sandboxed.commands.remove,
             'write to_file': resources.commands.write_to_file
         },
         null
@@ -33,7 +33,7 @@ export namespace commands {
     export type write_to_file = _pi.Command_Procedure<
         resources.commands.write_to_file,
         {
-            'write file': resources_pareto.filesystem_unrestricted.commands.write_file
+            'write file': resources_pareto.filesystem_sandboxed.commands.write_file
         },
         null
     >
