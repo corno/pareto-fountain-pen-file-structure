@@ -10,12 +10,12 @@ import * as signatures from "../../../interface/signatures"
 import * as d_write_to_directory from "../../../interface/to_be_generated/write_to_dictionary"
 
 //dependencies
-import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/sandboxed_path/sandboxed_path"
+import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/unrestricted_path/unrestricted_path"
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
 
 export const $$: signatures.commands.write_to_directory = _p.command_procedure(
-    ($p, $cr, $qr, $x) => [
+    ($p, $cr, $qr) => [
         _p.if_.direct(
             $p['remove before creating'],
             [
@@ -47,7 +47,7 @@ export const $$: signatures.commands.write_to_directory = _p.command_procedure(
                             },
                             ($): d_write_to_directory.Error__nodes => ['file', $],
                         ))
-                        case 'directory': return _pt.ss($, ($) => $$($cr, $qr, $x).execute(
+                        case 'directory': return _pt.ss($, ($) => $$($cr, $qr, null).execute(
                             {
                                 'directory': $,
                                 'path': $p.generic['escape spaces in path']
