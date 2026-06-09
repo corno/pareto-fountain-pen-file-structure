@@ -1,17 +1,17 @@
-import * as _pi from 'pareto-core/dist/interface'
-import * as _p from 'pareto-core/dist/command'
+// import * as _pi from 'pareto-core/dist/interface'
+// import * as _p from 'pareto-core/dist/command'
 
-import * as signatures from "../../../interface/signatures"
+// import * as signatures from "../../../interface/signatures"
 
-//dependencies
+// //dependencies
 
-export const $$: signatures.commands.console_error = _p.command_procedure(
-    ($p, $cr) => [
-        $cr['log error'].execute(
-            {
-                'message': $p.paragraph,
-            },
-            ($) => $,
-        )
-    ]
-)
+// export const $$: signatures.commands.console_error = _p.command_procedure(
+//     ($p, $cr) => [
+//         $cr['log error'].execute(
+//             {
+//                 'message': $p.paragraph,
+//             },
+//             ($) => $,
+//         )
+//     ]
+// )

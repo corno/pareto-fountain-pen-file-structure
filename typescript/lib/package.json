@@ -1,6 +1,6 @@
 {
   "name": "pareto-fountain-pen-file-structure",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "author": "Corno",
   "license": "Apache-2.0",
   "description": "",
@@ -27,7 +27,6 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "pareto-resources": "^0.2.0",
-    "pareto-stream": "^0.1.0"
+    "pareto-resources": "^0.2.0"
   }
 }
