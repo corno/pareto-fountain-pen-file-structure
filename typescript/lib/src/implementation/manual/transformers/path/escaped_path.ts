@@ -28,6 +28,7 @@ const replace_space = ($: string): string => {
 
 export const Context_path = ($: d_path.Context_Path): d_path.Context_Path => {
     return {
+        'start': null,
         'subpath': $.subpath.__l_map(($) => replace_space($)),
     }
 }
