@@ -2,13 +2,14 @@ import * as _pi from 'pareto-core/dist/interface'
 
 import * as resources from "./resources"
 import * as resources_pareto from "pareto-resources/dist/interface/resources"
+import * as resources_pareto_stream from "pareto-stream/dist/interface/resources"
 
 export namespace commands {
 
     export type console_error = _pi.Command_Procedure<
         resources.commands.console_error,
         {
-            'log error': resources_pareto.stream.commands.log_error
+            'log error': resources_pareto_stream.stream.commands.log_error
         },
         null,
         null
@@ -17,7 +18,7 @@ export namespace commands {
     export type console_log = _pi.Command_Procedure<
         resources.commands.console_log,
         {
-            'log': resources_pareto.stream.commands.log
+            'log': resources_pareto_stream.stream.commands.log
         },
         null,
         null
