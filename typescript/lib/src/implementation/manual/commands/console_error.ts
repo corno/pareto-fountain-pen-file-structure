@@ -6,8 +6,8 @@
 // //dependencies
 
 // export const $$: signatures.commands.console_error = _p.command_procedure(
-//     ($p, $cr) => [
-//         $cr['log error'].execute(
+//     ($d, $s, $q, $c) => [
+//         $c['log error'].execute(
 //             {
 //                 'message': $p.paragraph,
 //             },

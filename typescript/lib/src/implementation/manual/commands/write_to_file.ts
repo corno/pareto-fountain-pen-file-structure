@@ -16,17 +16,17 @@ import * as t_path_to_path from "pareto-resources/dist/implementation/manual/tra
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
 export const $$: signatures.commands.write_to_file = _p.command_procedure(
-    ($p, $cr) => [
-        $cr['write file'].execute(
+    ($d, $s, $q, $c) => [
+        $c['write file'].execute(
             {
                 'path': _p_change_context(
-                    t_path_to_path.deprecated_extend_node_path($p['directory path'], { 'addition': $p.filename }),
-                    ($) => $p.generic['escape spaces in path']
+                    t_path_to_path.deprecated_extend_node_path($d['directory path'], { 'addition': $d.filename }),
+                    ($) => $d.generic['escape spaces in path']
                         ? t_path_to_escaped_path.Node_path($)
                         : $,
                 ),
                 'data': _pt.list.from.list(
-                    t_prose_2_lines.Paragraph($p.paragraph, { 'indentation': $p.generic['prose serialize'].indentation }).__l_map(($) => $ + $p.generic['prose serialize'].newline),
+                    t_prose_2_lines.Paragraph($d.paragraph, { 'indentation': $d.generic['prose serialize'].indentation }).__l_map(($) => $ + $d.generic['prose serialize'].newline),
                 ).flatten(
                     ($) => _p_list_from_text($, ($) => $),
                 )

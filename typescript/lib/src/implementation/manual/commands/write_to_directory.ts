@@ -15,16 +15,16 @@ import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
 
 export const $$: signatures.commands.write_to_directory = _p.command_procedure(
-    ($p, $cr, $qr) => [
+    ($d, $s, $q, $c) => [
         _p.if_.direct(
-            $p['remove before creating'],
+            $d['remove before creating'],
             [
-                $cr.remove.execute(
+                $c.remove.execute(
                     {
                         'path': t_path_to_path.deprecated_node_path_to_context_path(
-                            $p.generic['escape spaces in path']
-                                ? t_path_to_escaped_path.Node_path($p.path)
-                                : $p.path
+                            $d.generic['escape spaces in path']
+                                ? t_path_to_escaped_path.Node_path($d.path)
+                                : $d.path
                         ),
                         'error if not exists': false
                     },
@@ -33,28 +33,28 @@ export const $$: signatures.commands.write_to_directory = _p.command_procedure(
             ]
         ),
         _p.dictionaryx.parallel(
-            $p.directory,
+            $d.directory,
             ($, id) => [
                 _p_change_context($, ($): _pi.Command_Promise<d_write_to_directory.Error__nodes> => {
-                    const node_path = t_path_to_path.deprecated_extend_node_path($p.path, { 'addition': id })
+                    const node_path = t_path_to_path.deprecated_extend_node_path($d.path, { 'addition': id })
                     switch ($[0]) {
-                        case 'file': return _pt.ss($, ($) => $cr['write to file'].execute(
+                        case 'file': return _pt.ss($, ($) => $c['write to file'].execute(
                             {
                                 'paragraph': $,
-                                'directory path': $p.path,
+                                'directory path': $d.path,
                                 'filename': id,
-                                'generic': $p.generic,
+                                'generic': $d.generic,
                             },
                             ($): d_write_to_directory.Error__nodes => ['file', $],
                         ))
-                        case 'directory': return _pt.ss($, ($) => $$($cr, $qr, null).execute(
+                        case 'directory': return _pt.ss($, ($) => $$(null, $q, $c).execute(
                             {
                                 'directory': $,
-                                'path': $p.generic['escape spaces in path']
+                                'path': $d.generic['escape spaces in path']
                                     ? t_path_to_escaped_path.Node_path(node_path)
                                     : node_path,
                                 'remove before creating': false,
-                                'generic': $p.generic
+                                'generic': $d.generic
                             },
                             ($): d_write_to_directory.Error__nodes => ['directory', $],
                         ))
