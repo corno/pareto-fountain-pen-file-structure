@@ -1,12 +1,12 @@
 
-import * as pt from 'pareto-core/dist/command'
-import * as _pt from 'pareto-core/dist/assign'
-import * as pci from 'pareto-core/dist/command_interface'
+import * as p_ from 'pareto-core/dist/command'
+import * as p_t from 'pareto-core/dist/assign'
+import * as p_ci from 'pareto-core/dist/command_interface'
 
 
 import p_change_context from 'pareto-core/dist/_p_change_context'
 
-import * as signatures from "../../../interface/signatures"
+import * as signatures from "../../../interface/commands"
 
 //data types
 import * as d_write_to_directory from "../../../interface/to_be_generated/write_to_dictionary"
@@ -16,9 +16,9 @@ import * as t_path_to_path from "pareto-resources/dist/implementation/manual/tra
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
 
-export const $$: signatures.commands.write_to_directory = pt.command_procedure(
+export const $$: signatures.procedures.write_to_directory = p_.command_procedure(
     ($d, $s, $q, $c) => [
-        pt.if_.direct(
+        p_.if_.direct(
             $d['remove before creating'],
             [
                 $c.remove.execute(
@@ -34,13 +34,13 @@ export const $$: signatures.commands.write_to_directory = pt.command_procedure(
                 )
             ]
         ),
-        pt.dictionaryx.parallel(
+        p_.dictionaryx.parallel(
             $d.directory,
             ($, id) => [
-                p_change_context($, ($): pci.Command_Promise<d_write_to_directory.Error__nodes> => {
+                p_change_context($, ($): p_ci.Command_Promise<d_write_to_directory.Error__nodes> => {
                     const node_path = t_path_to_path.deprecated_extend_node_path($d.path, { 'addition': id })
                     switch ($[0]) {
-                        case 'file': return pt.ss($, ($) => $c['write to file'].execute(
+                        case 'file': return p_.ss($, ($) => $c['write to file'].execute(
                             {
                                 'paragraph': $,
                                 'directory path': $d.path,
@@ -49,7 +49,7 @@ export const $$: signatures.commands.write_to_directory = pt.command_procedure(
                             },
                             ($): d_write_to_directory.Error__nodes => ['file', $],
                         ))
-                        case 'directory': return pt.ss($, ($) => $$(null, $q, $c).execute(
+                        case 'directory': return p_.ss($, ($) => $$(null, $q, $c).execute(
                             {
                                 'directory': $,
                                 'path': $d.generic['escape spaces in path']
@@ -60,7 +60,7 @@ export const $$: signatures.commands.write_to_directory = pt.command_procedure(
                             },
                             ($): d_write_to_directory.Error__nodes => ['directory', $],
                         ))
-                        default: return _pt.au($[0])
+                        default: return p_t.au($[0])
                     }
                 }),
             ],

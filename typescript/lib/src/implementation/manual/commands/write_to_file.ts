@@ -1,11 +1,10 @@
 
-import * as _pt from 'pareto-core/dist/assign'
-import * as pi from 'pareto-core/dist/interface'
-import * as pt from 'pareto-core/dist/command'
+import * as p_ from 'pareto-core/dist/command'
+import * as p_t from 'pareto-core/dist/assign'
 import p_change_context from 'pareto-core/dist/_p_change_context'
 import p_list_from_text from 'pareto-core/dist/_p_list_from_text'
 
-import * as signatures from "../../../interface/signatures"
+import * as signatures from "../../../interface/commands"
 
 //data types
 import * as d_write_to_file from "../../../interface/to_be_generated/write_to_file"
@@ -15,7 +14,7 @@ import * as t_prose_2_lines from "pareto-fountain-pen/dist/implementation/manual
 import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/unrestricted_path/unrestricted_path"
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
-export const $$: signatures.commands.write_to_file = pt.command_procedure(
+export const $$: signatures.procedures.write_to_file = p_.command_procedure(
     ($d, $s, $q, $c) => [
         $c['write file'].execute(
             {
@@ -25,7 +24,7 @@ export const $$: signatures.commands.write_to_file = pt.command_procedure(
                         ? t_path_to_escaped_path.Node_path($)
                         : $,
                 ),
-                'data': _pt.list.from.list(
+                'data': p_t.list.from.list(
                     t_prose_2_lines.Paragraph($d.paragraph, { 'indentation': $d.generic['prose serialize'].indentation }).__l_map(($) => $ + $d.generic['prose serialize'].newline),
                 ).flatten(
                     ($) => p_list_from_text($, ($) => $),

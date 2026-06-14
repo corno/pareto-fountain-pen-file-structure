@@ -1,5 +1,4 @@
 // import * as pi from 'pareto-core/dist/interface'
-// import * as pt from 'pareto-core/dist/command'
 
 // import * as signatures from "../../../interface/signatures"
 
