@@ -18,6 +18,7 @@ const replace_space = ($: string): string => {
             } else {
                 $i['add item']($)
             }
+            return null
         })
     })
     return _p_text_from_list(

@@ -1,7 +1,9 @@
 
 import * as _p from 'pareto-core/dist/command'
 import * as _pt from 'pareto-core/dist/assign'
-import * as _pi from 'pareto-core/dist/interface'
+import * as _pci from 'pareto-core/dist/command_interface'
+
+
 import _p_change_context from 'pareto-core/dist/_p_change_context'
 
 import * as signatures from "../../../interface/signatures"
@@ -35,10 +37,10 @@ export const $$: signatures.commands.write_to_directory = _p.command_procedure(
         _p.dictionaryx.parallel(
             $d.directory,
             ($, id) => [
-                _p_change_context($, ($): _pi.Command_Promise<d_write_to_directory.Error__nodes> => {
+                _p_change_context($, ($): _pci.Command_Promise<d_write_to_directory.Error__nodes> => {
                     const node_path = t_path_to_path.deprecated_extend_node_path($d.path, { 'addition': id })
                     switch ($[0]) {
-                        case 'file': return _pt.ss($, ($) => $c['write to file'].execute(
+                        case 'file': return _p.ss($, ($) => $c['write to file'].execute(
                             {
                                 'paragraph': $,
                                 'directory path': $d.path,
@@ -47,7 +49,7 @@ export const $$: signatures.commands.write_to_directory = _p.command_procedure(
                             },
                             ($): d_write_to_directory.Error__nodes => ['file', $],
                         ))
-                        case 'directory': return _pt.ss($, ($) => $$(null, $q, $c).execute(
+                        case 'directory': return _p.ss($, ($) => $$(null, $q, $c).execute(
                             {
                                 'directory': $,
                                 'path': $d.generic['escape spaces in path']
