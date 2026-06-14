@@ -1,4 +1,4 @@
-import * as pi from 'pareto-core/dist/interface'
+import * as p_di from 'pareto-core/dist/data/interface'
 
 import * as d_remove from "pareto-resources/dist/interface/generated/liana/schemas/fs_unrestricted_remove/data"
 import * as d_fp_fs from "./file-system"
@@ -7,7 +7,7 @@ import * as d_write_to_file from "./write_to_file"
 
 export type Error =
     | ['remove', d_remove.Error]
-    | ['nodes', pi.Dictionary<Error__nodes>]
+    | ['nodes', p_di.Dictionary<Error__nodes>]
 
 export type Error__nodes =
     | ['directory', Error]

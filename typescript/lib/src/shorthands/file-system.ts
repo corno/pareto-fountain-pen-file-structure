@@ -1,5 +1,5 @@
 import * as pt from 'pareto-core-shorthands/dist/unconstrained'
-import * as pi from 'pareto-core/dist/interface'
+import * as p_di from 'pareto-core/dist/data/interface'
 
 import * as d_target from "../interface/to_be_generated/file-system"
 import * as d_target_fp from "pareto-fountain-pen/dist/interface/generated/liana/schemas/prose/data"
