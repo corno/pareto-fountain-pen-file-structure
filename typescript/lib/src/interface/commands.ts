@@ -1,4 +1,4 @@
-import * as pci from 'pareto-core/dist/command_interface'
+import * as p_ci from 'pareto-core/dist/command/interface'
 
 
 import * as d_console_error from "./to_be_generated/console_error"
@@ -10,16 +10,16 @@ import * as resources_pareto from "pareto-resources/dist/interface/resources"
 
 export namespace commands {
 
-    export type console_error = pci.Command<d_console_error.Error, d_console_error.Parameters>
-    export type console_log = pci.Command<d_console_log.Error, d_console_log.Parameters>
-    export type write_to_directory = pci.Command<d_write_to_directory.Error, d_write_to_directory.Parameters>
-    export type write_to_file = pci.Command<d_write_to_file.Error, d_write_to_file.Parameters>
+    export type console_error = p_ci.Command<d_console_error.Error, d_console_error.Parameters>
+    export type console_log = p_ci.Command<d_console_log.Error, d_console_log.Parameters>
+    export type write_to_directory = p_ci.Command<d_write_to_directory.Error, d_write_to_directory.Parameters>
+    export type write_to_file = p_ci.Command<d_write_to_file.Error, d_write_to_file.Parameters>
 
 }
 
 export namespace procedures {
 
-    export type write_to_directory = pci.Command_Procedure<
+    export type write_to_directory = p_ci.Command_Procedure<
         commands.write_to_directory,
         null,
         null,
@@ -29,7 +29,7 @@ export namespace procedures {
         }
     >
 
-    export type write_to_file = pci.Command_Procedure<
+    export type write_to_file = p_ci.Command_Procedure<
         commands.write_to_file,
         null,
         null,

@@ -1,10 +1,10 @@
 
-import * as p_ from 'pareto-core/dist/command'
+import * as p_ from 'pareto-core/dist/command/implementation'
 import * as p_t from 'pareto-core/dist/assign'
-import * as p_ci from 'pareto-core/dist/command_interface'
+import * as p_ci from 'pareto-core/dist/command/interface'
 
 
-import p_change_context from 'pareto-core/dist/_p_change_context'
+import p_change_context from 'pareto-core/dist/specials/change_context'
 
 import * as signatures from "../../../interface/commands"
 

@@ -1,8 +1,8 @@
 
-import * as p_ from 'pareto-core/dist/command'
+import * as p_ from 'pareto-core/dist/command/implementation'
 import * as p_t from 'pareto-core/dist/assign'
-import p_change_context from 'pareto-core/dist/_p_change_context'
-import p_list_from_text from 'pareto-core/dist/_p_list_from_text'
+import p_change_context from 'pareto-core/dist/specials/change_context'
+import p_list_from_text from 'pareto-core/dist/specials/list_from_text'
 
 import * as signatures from "../../../interface/commands"
 
