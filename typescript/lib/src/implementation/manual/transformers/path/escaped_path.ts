@@ -1,4 +1,4 @@
-import * as pt from 'pareto-core/dist/assign'
+import * as pt from 'pareto-core/dist/transformer/implementation'
 import p_variables from 'pareto-core/dist/specials/variables'
 import p_list_from_text from 'pareto-core/dist/specials/list_from_text'
 import p_list_build_deprecated from 'pareto-core/dist/specials/list_build_deprecated'
