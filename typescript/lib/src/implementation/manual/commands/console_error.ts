@@ -3,7 +3,7 @@
 
 // //dependencies
 
-// export const $$: signatures.commands.console_error = pt.command_procedure(
+// export const $$: signatures.commands.console_error = p_.command_procedure(
 //     ($d, $s, $q, $c) => [
 //         $c['log error'].execute(
 //             {

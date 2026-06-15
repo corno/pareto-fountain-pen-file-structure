@@ -1,5 +1,3 @@
-import * as pt from 'pareto-core/dist/implementation/transformer'
-import p_variables from 'pareto-core/dist/implementation/specials/variables'
 import p_list_from_text from 'pareto-core/dist/implementation/specials/list_from_text'
 import p_list_build_deprecated from 'pareto-core/dist/implementation/specials/list_build_deprecated'
 import p_text_from_list from 'pareto-core/dist/implementation/specials/text_from_list'
