@@ -1,4 +1,4 @@
-import * as p_di from 'pareto-core/dist/data/interface'
+import * as p_di from 'pareto-core/dist/interface/data'
 
 import * as d_fp from "pareto-fountain-pen/dist/interface/generated/liana/schemas/prose/data"
 

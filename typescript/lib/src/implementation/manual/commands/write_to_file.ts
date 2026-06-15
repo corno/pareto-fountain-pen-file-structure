@@ -1,8 +1,8 @@
 
-import * as p_ from 'pareto-core/dist/command/implementation'
-import * as p_t from 'pareto-core/dist/assign'
-import p_change_context from 'pareto-core/dist/specials/change_context'
-import p_list_from_text from 'pareto-core/dist/specials/list_from_text'
+import * as p_ from 'pareto-core/dist/implementation/command'
+import * as p_temp from 'pareto-core/dist/implementation/transformer'
+import p_change_context from 'pareto-core/dist/implementation/specials/change_context'
+import p_list_from_text from 'pareto-core/dist/implementation/specials/list_from_text'
 
 import * as signatures from "../../../interface/commands"
 
@@ -24,7 +24,7 @@ export const $$: signatures.procedures.write_to_file = p_.command_procedure(
                         ? t_path_to_escaped_path.Node_path($)
                         : $,
                 ),
-                'data': p_t.list.from.list(
+                'data': p_temp.list.from.list(
                     t_prose_2_lines.Paragraph($d.paragraph, { 'indentation': $d.generic['prose serialize'].indentation }).__l_map(($) => $ + $d.generic['prose serialize'].newline),
                 ).flatten(
                     ($) => p_list_from_text($, ($) => $),

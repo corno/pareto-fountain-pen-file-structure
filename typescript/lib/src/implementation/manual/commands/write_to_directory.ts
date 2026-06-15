@@ -1,9 +1,8 @@
 
-import * as p_ from 'pareto-core/dist/command/implementation'
-import * as p_t from 'pareto-core/dist/assign'
+import * as p_ from 'pareto-core/dist/implementation/command'
 
 
-import p_change_context from 'pareto-core/dist/specials/change_context'
+import p_change_context from 'pareto-core/dist/implementation/specials/change_context'
 
 import * as signatures from "../../../interface/commands"
 
@@ -59,7 +58,7 @@ export const $$: signatures.procedures.write_to_directory = p_.command_procedure
                             },
                             ($): d_write_to_directory.Error__nodes => ['directory', $],
                         ))
-                        default: return p_t.au($[0])
+                        default: return p_.au($[0])
                     }
                 }),
             ],

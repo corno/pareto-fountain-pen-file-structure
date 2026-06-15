@@ -1,4 +1,4 @@
-import * as p_di from 'pareto-core/dist/data/interface'
+import * as p_di from 'pareto-core/dist/interface/data'
 
 import * as d_remove from "pareto-resources/dist/interface/generated/liana/schemas/fs_unrestricted_remove/data"
 import * as d_fp_fs from "./file-system"
