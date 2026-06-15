@@ -1,7 +1,6 @@
 
 import * as p_ from 'pareto-core/dist/command/implementation'
 import * as p_t from 'pareto-core/dist/assign'
-import * as p_ci from 'pareto-core/dist/command/interface'
 
 
 import p_change_context from 'pareto-core/dist/specials/change_context'
@@ -37,7 +36,7 @@ export const $$: signatures.procedures.write_to_directory = p_.command_procedure
         p_.dictionaryx.parallel(
             $d.directory,
             ($, id) => [
-                p_change_context($, ($): p_ci.Command_Promise<d_write_to_directory.Error__nodes> => {
+                p_change_context($, ($): p_.Command_Promise<d_write_to_directory.Error__nodes> => {
                     const node_path = t_path_to_path.deprecated_extend_node_path($d.path, { 'addition': id })
                     switch ($[0]) {
                         case 'file': return p_.ss($, ($) => $c['write to file'].execute(
