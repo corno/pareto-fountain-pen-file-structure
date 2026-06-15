@@ -7,7 +7,7 @@ import p_list_from_text from 'pareto-core/dist/implementation/specials/list_from
 import * as signatures from "../../../interface/commands"
 
 //data types
-import * as d_write_to_file from "../../../interface/to_be_generated/write_to_file"
+import * as d_write_to_file from "../../../interface/data/write_to_file"
 
 //dependencies
 import * as t_prose_2_lines from "pareto-fountain-pen/dist/implementation/manual/transformers/prose/lines"

@@ -7,7 +7,7 @@ import p_change_context from 'pareto-core/dist/implementation/specials/change_co
 import * as signatures from "../../../interface/commands"
 
 //data types
-import * as d_write_to_directory from "../../../interface/to_be_generated/write_to_dictionary"
+import * as d_write_to_directory from "../../../interface/data/write_to_dictionary"
 
 //dependencies
 import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/unrestricted_path/unrestricted_path"

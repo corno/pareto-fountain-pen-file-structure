@@ -1,6 +1,6 @@
 import * as pt from 'pareto-core-shorthands/dist/unconstrained'
 
-import * as d_target from "../interface/to_be_generated/file-system"
+import * as d_target from "../interface/data/file-system"
 import * as d_target_fp from "pareto-fountain-pen/dist/interface/generated/liana/schemas/prose/data"
 
 export namespace n {
