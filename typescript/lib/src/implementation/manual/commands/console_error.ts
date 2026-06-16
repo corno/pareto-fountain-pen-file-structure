@@ -1,9 +1,9 @@
 
-// import * as signatures from "../../../interface/signatures"
+// import * as interface_ from "../../../interface/signatures"
 
 // //dependencies
 
-// export const $$: signatures.commands.console_error = p_.command_procedure(
+// export const $$: interface_.commands.console_error = p_.command_procedure(
 //     ($d, $s, $q, $c) => [
 //         $c['log error'].execute(
 //             {

@@ -5,7 +5,7 @@ import * as p_ from 'pareto-core/dist/implementation/command'
 import p_change_context from 'pareto-core/dist/implementation/specials/change_context'
 import p_variables from 'pareto-core/dist/implementation/specials/variables'
 
-import * as signatures from "../../../interface/commands"
+import * as interface_ from "../../../interface/commands"
 
 //data types
 import * as d_write_to_directory from "../../../interface/data/write_to_dictionary"
@@ -15,9 +15,9 @@ import * as t_path_to_path from "pareto-resources/dist/implementation/manual/tra
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
 
-export const $$: signatures.procedures.write_to_directory = p_.command_procedure(
+export const $$: interface_.procedures.write_to_directory = p_.command_procedure(
     ($d, $s, $q, $c) => [
-        p_.if_.direct(
+        p_.s.if_.direct(
             $d['remove before creating'],
             [
                 $c.remove.execute(
@@ -33,7 +33,7 @@ export const $$: signatures.procedures.write_to_directory = p_.command_procedure
                 )
             ]
         ),
-        p_.dictionary(
+        p_.s.dictionary(
             $d.directory,
             ($, id) => p_variables((): p_.Command_Block<d_write_to_directory.Error__nodes> => {
                 const node_path = t_path_to_path.deprecated_extend_node_path($d.path, { 'addition': id })

@@ -4,7 +4,7 @@ import * as p_temp from 'pareto-core/dist/implementation/transformer'
 import p_change_context from 'pareto-core/dist/implementation/specials/change_context'
 import p_list_from_text from 'pareto-core/dist/implementation/specials/list_from_text'
 
-import * as signatures from "../../../interface/commands"
+import * as interface_ from "../../../interface/commands"
 
 //data types
 import * as d_write_to_file from "../../../interface/data/write_to_file"
@@ -14,7 +14,7 @@ import * as t_prose_2_lines from "pareto-fountain-pen/dist/implementation/manual
 import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/unrestricted_path/unrestricted_path"
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
-export const $$: signatures.procedures.write_to_file = p_.command_procedure(
+export const $$: interface_.procedures.write_to_file = p_.command_procedure(
     ($d, $s, $q, $c) => [
         $c['write file'].execute(
             {
