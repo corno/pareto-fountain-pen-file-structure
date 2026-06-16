@@ -3,6 +3,7 @@ import * as p_ from 'pareto-core/dist/implementation/command'
 
 
 import p_change_context from 'pareto-core/dist/implementation/specials/change_context'
+import p_variables from 'pareto-core/dist/implementation/specials/variables'
 
 import * as signatures from "../../../interface/commands"
 
@@ -32,13 +33,13 @@ export const $$: signatures.procedures.write_to_directory = p_.command_procedure
                 )
             ]
         ),
-        p_.dictionaryx.parallel(
+        p_.dictionary(
             $d.directory,
-            ($, id) => [
-                p_change_context($, ($): p_.Command_Promise<d_write_to_directory.Error__nodes> => {
-                    const node_path = t_path_to_path.deprecated_extend_node_path($d.path, { 'addition': id })
-                    switch ($[0]) {
-                        case 'file': return p_.ss($, ($) => $c['write to file'].execute(
+            ($, id) => p_variables((): p_.Command_Block<d_write_to_directory.Error__nodes> => {
+                const node_path = t_path_to_path.deprecated_extend_node_path($d.path, { 'addition': id })
+                switch ($[0]) {
+                    case 'file': return p_.ss($, ($) => [
+                        $c['write to file'].execute(
                             {
                                 'paragraph': $,
                                 'directory path': $d.path,
@@ -46,8 +47,10 @@ export const $$: signatures.procedures.write_to_directory = p_.command_procedure
                                 'generic': $d.generic,
                             },
                             ($): d_write_to_directory.Error__nodes => ['file', $],
-                        ))
-                        case 'directory': return p_.ss($, ($) => $$(null, $q, $c).execute(
+                        )
+                    ])
+                    case 'directory': return p_.ss($, ($) => [
+                        $$(null, $q, $c).execute(
                             {
                                 'directory': $,
                                 'path': $d.generic['escape spaces in path']
@@ -57,11 +60,11 @@ export const $$: signatures.procedures.write_to_directory = p_.command_procedure
                                 'generic': $d.generic
                             },
                             ($): d_write_to_directory.Error__nodes => ['directory', $],
-                        ))
-                        default: return p_.au($[0])
-                    }
-                }),
-            ],
+                        )
+                    ])
+                    default: return p_.au($[0])
+                }
+            }),
             ($): d_write_to_directory.Error => ['nodes', $]
         )
     ]
