@@ -24,8 +24,8 @@ export const $$: interface_.procedures.write_to_file = p_.command_procedure(
                         ? t_path_to_escaped_path.Node_path($)
                         : $,
                 ),
-                'data': p_temp.list.from.list(
-                    t_prose_2_lines.Paragraph($d.paragraph, { 'indentation': $d.generic['prose serialize'].indentation }).__l_map(($) => $ + $d.generic['prose serialize'].newline),
+                'data': p_temp.from.list(
+                    t_prose_2_lines.Paragraph($d.paragraph, { 'indentation': $d.generic['prose serialize'].indentation }).__l_map_deprecated(($) => $ + $d.generic['prose serialize'].newline),
                 ).flatten(
                     ($) => p_list_from_text(
                         $,

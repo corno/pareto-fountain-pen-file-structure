@@ -13,7 +13,7 @@ const replace_space = ($: string): string => {
         p_list_from_text(
             $,
             ($) => $
-        ).__l_map(($) => {
+        ).__l_map_deprecated(($) => {
             if ($ === search) {
                 $i['add item'](replace)
             } else {
@@ -31,7 +31,7 @@ const replace_space = ($: string): string => {
 export const Context_path = ($: d_path.Context_Path): d_path.Context_Path => {
     return {
         'start': $.start,
-        'subpath': $.subpath.__l_map(($) => replace_space($)),
+        'subpath': $.subpath.__l_map_deprecated(($) => replace_space($)),
     }
 }
 
