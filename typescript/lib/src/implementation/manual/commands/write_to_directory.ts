@@ -17,7 +17,7 @@ import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
 
 export const $$: interface_.procedures.write_to_directory = p_.command_procedure(
     ($d, $s, $q, $c) => [
-        p_.s.if_.direct(
+        p_.s.if_(
             $d['remove before creating'],
             [
                 $c.remove.execute(

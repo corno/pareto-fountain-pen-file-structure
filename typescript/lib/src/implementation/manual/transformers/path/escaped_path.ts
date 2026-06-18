@@ -10,7 +10,10 @@ import * as d_out from "pareto-fountain-pen/dist/interface/generated/liana/schem
 
 const replace_space = ($: string): string => {
     const replace = ($: string, search: number, replace: number): d_out.List_of_Characters => p_list_build_deprecated(($i) => {
-        p_list_from_text($, ($) => $).__l_map(($) => {
+        p_list_from_text(
+            $,
+            ($) => $
+        ).__l_map(($) => {
             if ($ === search) {
                 $i['add item'](replace)
             } else {
