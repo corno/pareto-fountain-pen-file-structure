@@ -1,8 +1,8 @@
 
 import * as p_ from 'pareto-core/dist/implementation/command'
 import * as p_temp from 'pareto-core/dist/implementation/transformer'
-import p_change_context from 'pareto-core/dist/implementation/specials/change_context'
-import p_list_from_text from 'pareto-core/dist/implementation/specials/list_from_text'
+import p_change_context from 'pareto-core/dist/implementation/refiner/specials/change_context'
+import p_list_from_text from 'pareto-core/dist/implementation/refiner/specials/list_from_text'
 
 import * as interface_ from "../../../interface/commands"
 
