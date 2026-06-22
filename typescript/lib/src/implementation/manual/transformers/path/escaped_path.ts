@@ -10,19 +10,21 @@ import * as d_out from "pareto-fountain-pen/dist/interface/generated/liana/schem
 
 
 const replace_space = ($: string): string => {
-    const replace = ($: string, search: number, replace: number): d_out.List_of_Characters => p_list_build_deprecated(($i) => {
-        p_.from.list(p_list_from_text(
-            $,
-            ($) => $
-        )).map(($) => {
-            if ($ === search) {
-                $i['add item'](replace)
-            } else {
-                $i['add item']($)
-            }
-            return null
+    const replace = ($: string, search: number, replace: number): d_out.List_of_Characters => p_list_build_deprecated(
+        ($i) => {
+            p_.from.list(p_list_from_text(
+                $,
+                ($) => $
+            )).map(
+                ($) => {
+                    if ($ === search) {
+                        $i['add item'](replace)
+                    } else {
+                        $i['add item']($)
+                    }
+                    return null
+                })
         })
-    })
     return p_text_from_list(
         replace($, 32, 95 /* space -> underscore */),
         ($) => $,
@@ -32,7 +34,8 @@ const replace_space = ($: string): string => {
 export const Context_path = ($: d_path.Context_Path): d_path.Context_Path => {
     return {
         'start': $.start,
-        'subpath': p_.from.list($.subpath).map(($) => replace_space($)),
+        'subpath': p_.from.list($.subpath).map(
+            ($) => replace_space($)),
     }
 }
 

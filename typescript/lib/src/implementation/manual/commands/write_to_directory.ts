@@ -32,36 +32,37 @@ export const $$: interface_.procedures.write_to_directory = p_.command_procedure
         ),
         p_.s.dictionary(
             $d.directory,
-            ($, id) => p_variables((): p_.Command_Block<d_write_to_directory.Error__nodes> => {
-                const node_path = t_path_to_path.deprecated_extend_node_path($d.path, { 'addition': id })
-                switch ($[0]) {
-                    case 'file': return p_.ss($, ($) => [
-                        $c['write to file'].execute(
-                            {
-                                'paragraph': $,
-                                'directory path': $d.path,
-                                'filename': id,
-                                'generic': $d.generic,
-                            },
-                            ($): d_write_to_directory.Error__nodes => ['file', $],
-                        )
-                    ])
-                    case 'directory': return p_.ss($, ($) => [
-                        $$(null, $q, $c).execute(
-                            {
-                                'directory': $,
-                                'path': $d.generic['escape spaces in path']
-                                    ? t_path_to_escaped_path.Node_path(node_path)
-                                    : node_path,
-                                'remove before creating': false,
-                                'generic': $d.generic
-                            },
-                            ($): d_write_to_directory.Error__nodes => ['directory', $],
-                        )
-                    ])
-                    default: return p_.au($[0])
-                }
-            }),
+            ($, id) => p_variables(
+                (): p_.Command_Block<d_write_to_directory.Error__nodes> => {
+                    const node_path = t_path_to_path.deprecated_extend_node_path($d.path, { 'addition': id })
+                    switch ($[0]) {
+                        case 'file': return p_.ss($, ($) => [
+                            $c['write to file'].execute(
+                                {
+                                    'paragraph': $,
+                                    'directory path': $d.path,
+                                    'filename': id,
+                                    'generic': $d.generic,
+                                },
+                                ($): d_write_to_directory.Error__nodes => ['file', $],
+                            )
+                        ])
+                        case 'directory': return p_.ss($, ($) => [
+                            $$(null, $q, $c).execute(
+                                {
+                                    'directory': $,
+                                    'path': $d.generic['escape spaces in path']
+                                        ? t_path_to_escaped_path.Node_path(node_path)
+                                        : node_path,
+                                    'remove before creating': false,
+                                    'generic': $d.generic
+                                },
+                                ($): d_write_to_directory.Error__nodes => ['directory', $],
+                            )
+                        ])
+                        default: return p_.au($[0])
+                    }
+                }),
             ($): d_write_to_directory.Error => ['nodes', $]
         )
     ]

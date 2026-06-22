@@ -29,7 +29,8 @@ export const $$: interface_.procedures.write_to_file = p_.command_procedure(
                                 'indentation': $d.generic['prose serialize'].indentation
                             }
                         )
-                    ).map(($) => $ + $d.generic['prose serialize'].newline),
+                    ).map(
+                        ($) => $ + $d.generic['prose serialize'].newline),
                 ).flatten(
                     ($) => p_list_from_text(
                         $,
