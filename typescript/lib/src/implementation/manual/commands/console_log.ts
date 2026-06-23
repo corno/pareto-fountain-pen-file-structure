@@ -4,7 +4,7 @@
 // //dependencies
 
 // //shorthands
-// import * as sh from "pareto-fountain-pen/dist/shorthands/prose"
+// import * as sh from "pareto-fountain-pen/dist/shorthands/prose/deprecated"
 
 // export const $$: interface_.commands.console_log = p_.command_procedure(
 //     ($d, $s, $q, $c) => [
