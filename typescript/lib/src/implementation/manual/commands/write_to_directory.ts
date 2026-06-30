@@ -36,7 +36,7 @@ export const $$: interface_.procedures.write_to_directory = p_.command_procedure
                 (): p_.Command_Block<d_write_to_directory.Error__nodes> => {
                     const node_path = t_path_to_path.deprecated_extend_node_path($d.path, { 'addition': id })
                     switch ($[0]) {
-                        case 'file': return p_.ss($, ($) => [
+                        case 'file': return p_.option($, ($) => [
                             $c['write to file'].execute(
                                 {
                                     'paragraph': $,
@@ -47,7 +47,7 @@ export const $$: interface_.procedures.write_to_directory = p_.command_procedure
                                 ($): d_write_to_directory.Error__nodes => ['file', $],
                             )
                         ])
-                        case 'directory': return p_.ss($, ($) => [
+                        case 'directory': return p_.option($, ($) => [
                             $$(null, $q, $c).execute(
                                 {
                                     'directory': $,
