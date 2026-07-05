@@ -1,4 +1,4 @@
-import * as d_fp_block from "pareto-fountain-pen/dist/interface/generated/liana/schemas/prose/data"
+import * as d_fp_block from "pareto-fountain-pen/interface/generated/liana/schemas/prose/data"
 
 export type Error = null
 

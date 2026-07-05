@@ -1,15 +1,15 @@
 
-import * as p_ from 'pareto-core/dist/implementation/command'
-import * as p_temp from 'pareto-core/dist/implementation/transformer'
-import p_change_context from 'pareto-core/dist/implementation/refiner/specials/change_context'
-import p_list_from_text from 'pareto-core/dist/implementation/refiner/specials/list_from_text'
+import * as p_ from 'pareto-core/implementation/command'
+import * as p_temp from 'pareto-core/implementation/transformer'
+import p_change_context from 'pareto-core/implementation/refiner/specials/change_context'
+import p_list_from_text from 'pareto-core/implementation/refiner/specials/list_from_text'
 
-import * as interface_ from "../../../interface/commands"
+import * as interface_ from "../../../interface/commands.js"
 
 //dependencies
-import * as t_prose_2_lines from "pareto-fountain-pen/dist/implementation/manual/transformers/prose/lines"
-import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/unrestricted_path/unrestricted_path"
-import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
+import * as t_prose_2_lines from "pareto-fountain-pen/implementation/manual/transformers/prose/lines"
+import * as t_path_to_path from "pareto-resources/implementation/manual/transformers/unrestricted_path/unrestricted_path"
+import * as t_path_to_escaped_path from "../transformers/path/escaped_path.js"
 
 export const $$: interface_.procedures.write_to_file = p_.command_procedure(
     ($d, $s, $q, $c) => [

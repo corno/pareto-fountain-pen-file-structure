@@ -1,12 +1,12 @@
-import * as p_ from 'pareto-core/dist/interface/command'
+import * as p_ from 'pareto-core/interface/command'
 
 
-import * as d_console_error from "./data/console_error"
-import * as d_console_log from "./data/console_log"
-import * as d_write_to_directory from "./data/write_to_dictionary"
-import * as d_write_to_file from "./data/write_to_file"
+import * as d_console_error from "./data/console_error.js"
+import * as d_console_log from "./data/console_log.js"
+import * as d_write_to_directory from "./data/write_to_dictionary.js"
+import * as d_write_to_file from "./data/write_to_file.js"
 
-import * as resources_pareto from "pareto-resources/dist/interface/resources"
+import * as resources_pareto from "pareto-resources/interface/resources"
 
 export namespace commands {
 

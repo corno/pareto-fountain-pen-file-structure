@@ -1,6 +1,6 @@
 {
   "name": "pareto-fountain-pen-file-structure",
-  "version": "0.1.31",
+  "version": "0.1.32",
   "author": "Corno",
   "license": "Apache-2.0",
   "description": "",
@@ -12,6 +12,13 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/corno/pareto-fountain-pen-file-structure.git"
+  },
+  "type": "module",
+  "exports": {
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    }
   },
   "main": "./dist/index.js",
   "types": "dist/index.d.ts",

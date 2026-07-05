@@ -1,15 +1,15 @@
 
-import * as p_ from 'pareto-core/dist/implementation/command'
-import p_variables from 'pareto-core/dist/implementation/command/specials/variables'
+import * as p_ from 'pareto-core/implementation/command'
+import p_variables from 'pareto-core/implementation/command/specials/variables'
 
-import * as interface_ from "../../../interface/commands"
+import * as interface_ from "../../../interface/commands.js"
 
 //data types
-import * as d_write_to_directory from "../../../interface/data/write_to_dictionary"
+import * as d_write_to_directory from "../../../interface/data/write_to_dictionary.js"
 
 //dependencies
-import * as t_path_to_path from "pareto-resources/dist/implementation/manual/transformers/unrestricted_path/unrestricted_path"
-import * as t_path_to_escaped_path from "../transformers/path/escaped_path"
+import * as t_path_to_path from "pareto-resources/implementation/manual/transformers/unrestricted_path/unrestricted_path"
+import * as t_path_to_escaped_path from "../transformers/path/escaped_path.js"
 
 
 export const $$: interface_.procedures.write_to_directory = p_.command_procedure(
