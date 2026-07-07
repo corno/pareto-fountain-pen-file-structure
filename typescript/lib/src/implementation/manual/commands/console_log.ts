@@ -6,7 +6,7 @@
 // //shorthands
 // import * as sh from "pareto-fountain-pen/shorthands/prose/deprecated"
 
-// export const $$: interface_.commands.console_log = p_.command_procedure(
+// export const $$: interface_.commands.console_log = p_.command(
 //     ($d, $s, $q, $c) => [
 //         $c['log'].execute(
 //             {

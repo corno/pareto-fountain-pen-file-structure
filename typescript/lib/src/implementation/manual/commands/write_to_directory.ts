@@ -12,7 +12,7 @@ import * as t_path_to_path from "pareto-resources/implementation/manual/transfor
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path.js"
 
 
-export const $$: interface_.procedures.write_to_directory = p_.command_procedure(
+export const $$: interface_.write_to_directory = p_.command(
     ($d, $s, $q, $c) => [
         p_.s.if_(
             $d['remove before creating'],

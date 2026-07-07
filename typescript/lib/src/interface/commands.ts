@@ -1,41 +1,23 @@
 import * as p_ from 'pareto-core/interface/command'
 
+import * as command_actions from "./command_actions.js"
+import * as command_actions_pareto_filesystem_unrestricted_api from "pareto-filesystem-unrestricted-api/interface/command_actions"
 
-import * as d_console_error from "./data/console_error.js"
-import * as d_console_log from "./data/console_log.js"
-import * as d_write_to_directory from "./data/write_to_dictionary.js"
-import * as d_write_to_file from "./data/write_to_file.js"
+export type write_to_directory = p_.Command_Procedure<
+    command_actions.write_to_directory,
+    null,
+    null,
+    {
+        'remove': command_actions_pareto_filesystem_unrestricted_api.remove,
+        'write to file': command_actions.write_to_file
+    }
+>
 
-import * as resources_pareto from "pareto-resources/interface/resources"
-
-export namespace commands {
-
-    export type console_error = p_.Command<d_console_error.Error, d_console_error.Parameters>
-    export type console_log = p_.Command<d_console_log.Error, d_console_log.Parameters>
-    export type write_to_directory = p_.Command<d_write_to_directory.Error, d_write_to_directory.Parameters>
-    export type write_to_file = p_.Command<d_write_to_file.Error, d_write_to_file.Parameters>
-
-}
-
-export namespace procedures {
-
-    export type write_to_directory = p_.Command_Procedure<
-        commands.write_to_directory,
-        null,
-        null,
-        {
-            'remove': resources_pareto.filesystem_unrestricted.commands.remove,
-            'write to file': commands.write_to_file
-        }
-    >
-
-    export type write_to_file = p_.Command_Procedure<
-        commands.write_to_file,
-        null,
-        null,
-        {
-            'write file': resources_pareto.filesystem_unrestricted.commands.write_file
-        }
-    >
-
-}
+export type write_to_file = p_.Command_Procedure<
+    command_actions.write_to_file,
+    null,
+    null,
+    {
+        'write file': command_actions_pareto_filesystem_unrestricted_api.write_file
+    }
+>

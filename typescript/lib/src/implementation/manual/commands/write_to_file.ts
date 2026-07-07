@@ -11,7 +11,7 @@ import * as t_prose_2_lines from "pareto-fountain-pen/implementation/manual/tran
 import * as t_path_to_path from "pareto-resources/implementation/manual/transformers/unrestricted_path/unrestricted_path"
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path.js"
 
-export const $$: interface_.procedures.write_to_file = p_.command_procedure(
+export const $$: interface_.write_to_file = p_.command(
     ($d, $s, $q, $c) => [
         $c['write file'].execute(
             {
