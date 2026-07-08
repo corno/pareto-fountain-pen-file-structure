@@ -1,9 +1,9 @@
 
-import * as d_write_file from "pareto-filesystem-unrestricted-api/interface/generated/liana/schemas/fs_unrestricted_write_file/data"
-import * as d_make_directory from "pareto-filesystem-unrestricted-api/interface/generated/liana/schemas/fs_unrestricted_make_directory/data"
-import * as d_fp_block from "pareto-fountain-pen/interface/generated/liana/schemas/prose/data"
-import * as d_path from "pareto-resources/interface/generated/liana/schemas/fs_unrestricted_path/data"
-import * as d_fp_prose_serialize from "pareto-fountain-pen/interface/data/prose_serialize"
+import type * as d_write_file from "pareto-filesystem-unrestricted-api/interface/generated/liana/schemas/fs_unrestricted_write_file/data"
+import type * as d_make_directory from "pareto-filesystem-unrestricted-api/interface/generated/liana/schemas/fs_unrestricted_make_directory/data"
+import type * as d_fp_block from "pareto-fountain-pen/interface/generated/liana/schemas/prose/data"
+import type * as d_path from "pareto-resources/interface/generated/liana/schemas/fs_unrestricted_path/data"
+import type * as d_fp_prose_serialize from "pareto-fountain-pen/interface/data/prose_serialize"
 
 export type Error =
     | ['make directory', d_make_directory.Error]

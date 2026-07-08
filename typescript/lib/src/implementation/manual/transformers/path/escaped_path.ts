@@ -5,8 +5,8 @@ import p_list_build_deprecated from 'pareto-core/implementation/refiner/specials
 import p_text_from_list from 'pareto-core/implementation/transformer/specials/text_from_list'
 
 //data types
-import * as d_path from "pareto-resources/interface/generated/liana/schemas/fs_unrestricted_path/data"
-import * as d_out from "pareto-fountain-pen/interface/generated/liana/schemas/list_of_characters/data"
+import type * as d_path from "pareto-resources/interface/generated/liana/schemas/fs_unrestricted_path/data"
+import type * as d_out from "pareto-fountain-pen/interface/generated/liana/schemas/list_of_characters/data"
 
 export namespace interface_ {
     export type Context_path = p_i.Transformer<

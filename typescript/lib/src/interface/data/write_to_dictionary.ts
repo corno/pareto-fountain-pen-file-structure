@@ -1,9 +1,9 @@
 import * as p_ from 'pareto-core/interface/data'
 
-import * as d_remove from "pareto-filesystem-unrestricted-api/interface/generated/liana/schemas/fs_unrestricted_remove/data"
-import * as d_fp_fs from "./file-system.js"
-import * as d_path from "pareto-resources/interface/generated/liana/schemas/fs_unrestricted_path/data"
-import * as d_write_to_file from "./write_to_file.js"
+import type * as d_remove from "pareto-filesystem-unrestricted-api/interface/generated/liana/schemas/fs_unrestricted_remove/data"
+import type * as d_fp_fs from "./file-system.js"
+import type * as d_path from "pareto-resources/interface/generated/liana/schemas/fs_unrestricted_path/data"
+import type * as d_write_to_file from "./write_to_file.js"
 
 export type Error =
     | ['remove', d_remove.Error]

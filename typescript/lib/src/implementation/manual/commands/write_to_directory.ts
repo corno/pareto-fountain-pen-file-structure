@@ -5,7 +5,7 @@ import p_variables from 'pareto-core/implementation/command/specials/variables'
 import * as interface_ from "../../../interface/declarations/commands.js"
 
 //data types
-import * as d_write_to_directory from "../../../interface/data/write_to_dictionary.js"
+import type * as d_write_to_directory from "../../../interface/data/write_to_dictionary.js"
 
 //dependencies
 import * as t_path_to_path from "pareto-resources/implementation/manual/transformers/unrestricted_path/unrestricted_path"
