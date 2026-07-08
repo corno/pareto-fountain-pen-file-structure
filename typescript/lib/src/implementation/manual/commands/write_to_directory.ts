@@ -60,7 +60,7 @@ export const $$: interface_.write_to_directory = p_.command(
                                 ($): d_write_to_directory.Error__nodes => ['directory', $],
                             )
                         ])
-                        default: return p_.au($[0])
+                        default: return p_.exhaustive($[0])
                     }
                 }),
             ($): d_write_to_directory.Error => ['nodes', $]
