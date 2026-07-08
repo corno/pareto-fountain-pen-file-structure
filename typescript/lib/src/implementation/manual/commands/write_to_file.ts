@@ -4,7 +4,7 @@ import * as p_temp from 'pareto-core/implementation/transformer'
 import p_change_context from 'pareto-core/implementation/refiner/specials/change_context'
 import p_list_from_text from 'pareto-core/implementation/refiner/specials/list_from_text'
 
-import * as interface_ from "../../../interface/declarations/commands.js"
+import type * as interface_ from "../../../interface/declarations/commands.js"
 
 //dependencies
 import * as t_prose_2_lines from "pareto-fountain-pen/implementation/manual/transformers/prose/lines"

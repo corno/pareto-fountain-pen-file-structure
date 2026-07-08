@@ -1,5 +1,5 @@
 
-// import * as interface_ from "../../../interface/signatures.js"
+// import type * as interface_ from "../../../interface/signatures.js"
 
 // //dependencies
 
