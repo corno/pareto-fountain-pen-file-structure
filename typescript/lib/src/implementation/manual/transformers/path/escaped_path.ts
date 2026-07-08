@@ -18,6 +18,7 @@ export namespace interface_ {
         d_path.Node_Path
     >
 }
+import * as temp_interface_ from "../../../../interface/declarations/transformers/path/escaped_path.js"
 
 
 
