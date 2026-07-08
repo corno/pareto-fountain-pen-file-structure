@@ -2,7 +2,7 @@
 import * as p_ from 'pareto-core/implementation/command'
 import p_variables from 'pareto-core/implementation/command/specials/variables'
 
-import * as interface_ from "../../../interface/commands.js"
+import * as interface_ from "../../../interface/declarations/commands.js"
 
 //data types
 import * as d_write_to_directory from "../../../interface/data/write_to_dictionary.js"
