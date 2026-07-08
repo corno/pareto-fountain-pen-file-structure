@@ -1,7 +1,7 @@
 import * as p_ from 'pareto-core/interface/command'
 
 import * as command_actions from "../actions/commands.js"
-import * as actions_commands_pareto_filesystem_unrestricted_api from "pareto-filesystem-unrestricted-api/interface/command_actions"
+import type * as actions_commands_pareto_filesystem_unrestricted_api from "pareto-filesystem-unrestricted-api/interface/command_actions"
 
 export type write_to_directory = p_.Command<
     command_actions.write_to_directory,
