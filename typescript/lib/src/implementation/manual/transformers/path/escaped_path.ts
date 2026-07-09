@@ -3,7 +3,7 @@ import p_list_from_text from 'pareto-core/implementation/refiner/specials/list_f
 import p_list_build_deprecated from 'pareto-core/implementation/refiner/specials/list_build_deprecated'
 import p_text_from_list from 'pareto-core/implementation/transformer/specials/text_from_list'
 
-import type * as interface_ from "../../../../interface/declarations/transformers/path/escaped_path.js"
+import type * as interface_ from "../../../../declarations/transformers/path/escaped_path.js"
 
 //data types
 import type * as d_out from "pareto-fountain-pen/interface/generated/liana/schemas/list_of_characters/data"
