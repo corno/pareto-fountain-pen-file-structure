@@ -2,10 +2,10 @@
 import * as p_ from 'pareto-core/implementation/command'
 import p_variables from 'pareto-core/implementation/command/specials/variables'
 
-import type * as interface_ from "../../../declarations/commands.js"
+import type * as interface_ from "../../declarations/commands.js"
 
 //data types
-import type * as d_write_to_directory from "../../../interface/data/write_to_directory.js"
+import type * as d_write_to_directory from "../../interface/data/write_to_directory.js"
 
 //dependencies
 import * as t_path_to_path from "pareto-resources/implementation/manual/transformers/unrestricted_path/unrestricted_path"
