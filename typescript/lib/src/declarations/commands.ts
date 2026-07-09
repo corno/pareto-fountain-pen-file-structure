@@ -1,6 +1,6 @@
 import * as p_ from 'pareto-core/interface/command_implementation'
 
-import * as command_interfaces from "../interface/commands.js"
+import type * as command_interfaces from "../interface/commands.js"
 import type * as command_interfaces_pareto_filesystem_unrestricted_api from "pareto-filesystem-unrestricted-api/interface/commands"
 
 export type write_to_directory = p_.Command_Implementation<
