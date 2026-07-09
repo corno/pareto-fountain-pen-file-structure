@@ -8,7 +8,7 @@ import type * as interface_ from "../../declarations/commands.js"
 import type * as d_write_to_directory from "../../interface/data/write_to_directory.js"
 
 //dependencies
-import * as t_path_to_path from "pareto-resources/implementation/manual/transformers/unrestricted_path/unrestricted_path"
+import * as t_path_to_path from "pareto-resources/implementation/transformers/unrestricted_path/unrestricted_path"
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path.js"
 
 

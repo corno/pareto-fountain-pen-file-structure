@@ -7,8 +7,8 @@ import p_list_from_text from 'pareto-core/implementation/refiner/specials/list_f
 import type * as interface_ from "../../declarations/commands.js"
 
 //dependencies
-import * as t_prose_2_lines from "pareto-fountain-pen/implementation/manual/transformers/prose/lines"
-import * as t_path_to_path from "pareto-resources/implementation/manual/transformers/unrestricted_path/unrestricted_path"
+import * as t_prose_2_lines from "pareto-fountain-pen/implementation/transformers/prose/lines"
+import * as t_path_to_path from "pareto-resources/implementation/transformers/unrestricted_path/unrestricted_path"
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path.js"
 
 export const $$: interface_.write_to_file = p_.command(
