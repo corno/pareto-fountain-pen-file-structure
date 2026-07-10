@@ -6,7 +6,7 @@ import p_text_from_list from 'pareto-core/implementation/transformer/specials/te
 import type * as interface_ from "../../../declarations/transformers/path/escaped_path.js"
 
 //data types
-import type * as d_out from "pareto-fountain-pen/interface/generated/liana/schemas/list_of_characters/data"
+import type * as d_out from "pareto-fountain-pen/interface/data/list_of_characters"
 
 
 
