@@ -5,7 +5,7 @@ import p_variables from 'pareto-core/implementation/command/specials/variables'
 import type * as interface_ from "../../declarations/commands.js"
 
 //data types
-import type * as d_write_to_directory from "../../interface/schemas/write_to_directory.js"
+import type * as s_write_to_directory from "../../interface/schemas/write_to_directory.js"
 
 //dependencies
 import * as t_path_to_path from "pareto-resources/implementation/transformers/unrestricted_path/unrestricted_path"
@@ -33,7 +33,7 @@ export const $$: interface_.write_to_directory = p_.command(
         p_.s.dictionary(
             $d.directory,
             ($, id) => p_variables(
-                (): p_.Command_Block<d_write_to_directory.Error__nodes> => {
+                (): p_.Command_Block<s_write_to_directory.Error__nodes> => {
                     const node_path = t_path_to_path.deprecated_extend_node_path($d.path, { 'addition': id })
                     switch ($[0]) {
                         case 'file': return p_.option($, ($) => [
@@ -44,7 +44,7 @@ export const $$: interface_.write_to_directory = p_.command(
                                     'filename': id,
                                     'generic': $d.generic,
                                 },
-                                ($): d_write_to_directory.Error__nodes => ['file', $],
+                                ($): s_write_to_directory.Error__nodes => ['file', $],
                             )
                         ])
                         case 'directory': return p_.option($, ($) => [
@@ -57,13 +57,13 @@ export const $$: interface_.write_to_directory = p_.command(
                                     'remove before creating': false,
                                     'generic': $d.generic
                                 },
-                                ($): d_write_to_directory.Error__nodes => ['directory', $],
+                                ($): s_write_to_directory.Error__nodes => ['directory', $],
                             )
                         ])
                         default: return p_.exhaustive($[0])
                     }
                 }),
-            ($): d_write_to_directory.Error => ['nodes', $]
+            ($): s_write_to_directory.Error => ['nodes', $]
         )
     ]
 )

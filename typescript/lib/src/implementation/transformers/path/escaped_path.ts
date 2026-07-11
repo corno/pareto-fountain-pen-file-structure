@@ -6,12 +6,12 @@ import p_text_from_list from 'pareto-core/implementation/transformer/specials/te
 import type * as interface_ from "../../../declarations/transformers/path/escaped_path.js"
 
 //data types
-import type * as d_out from "pareto-fountain-pen/interface/data/list_of_characters"
+import type * as s_out from "pareto-fountain-pen/interface/data/list_of_characters"
 
 
 
 const replace_space = ($: string): string => {
-    const replace = ($: string, search: number, replace: number): d_out.List_of_Characters => p_list_build_deprecated(
+    const replace = ($: string, search: number, replace: number): s_out.List_of_Characters => p_list_build_deprecated(
         ($i) => {
             p_.from.list(p_list_from_text(
                 $,
