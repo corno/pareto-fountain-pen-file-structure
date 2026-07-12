@@ -4,14 +4,22 @@ import * as p_temp from 'pareto-core/implementation/transformer'
 import p_change_context from 'pareto-core/implementation/refiner/specials/change_context'
 import p_list_from_text from 'pareto-core/implementation/refiner/specials/list_from_text'
 
-import type * as interface_ from "../../declarations/commands.js"
+import type * as command_interfaces from "../../interface/commands.js"
+import type * as command_interfaces_pareto_filesystem_unrestricted_api from "pareto-filesystem-unrestricted-api/interface/commands"
 
 //dependencies
 import * as t_prose_2_lines from "pareto-fountain-pen/implementation/transformers/prose/lines"
 import * as t_path_to_path from "pareto-resources/implementation/transformers/unrestricted_path/unrestricted_path"
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path.js"
 
-export const $$: interface_.write_to_file = p_.command(
+export const $$: p_.Command_Implementation<
+    command_interfaces.write_to_file,
+    null,
+    null,
+    {
+        'write file': command_interfaces_pareto_filesystem_unrestricted_api.write_file
+    }
+> = p_.command(
     ($d, $s, $q, $c) => [
         $c['write file'].execute(
             {

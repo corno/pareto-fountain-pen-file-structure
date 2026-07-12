@@ -2,7 +2,9 @@
 import * as p_ from 'pareto-core/implementation/command'
 import p_variables from 'pareto-core/implementation/command/specials/variables'
 
-import type * as interface_ from "../../declarations/commands.js"
+//interface dependencies
+import type * as command_interfaces from "../../interface/commands.js"
+import type * as command_interfaces_pareto_filesystem_unrestricted_api from "pareto-filesystem-unrestricted-api/interface/commands"
 
 //schemas
 import type * as s_write_to_directory from "../../interface/schemas/write_to_directory.js"
@@ -12,7 +14,15 @@ import * as t_path_to_path from "pareto-resources/implementation/transformers/un
 import * as t_path_to_escaped_path from "../transformers/path/escaped_path.js"
 
 
-export const $$: interface_.write_to_directory = p_.command(
+export const $$: p_.Command_Implementation<
+    command_interfaces.write_to_directory,
+    null,
+    null,
+    {
+        'remove': command_interfaces_pareto_filesystem_unrestricted_api.remove,
+        'write to file': command_interfaces.write_to_file
+    }
+> = p_.command(
     ($d, $s, $q, $c) => [
         p_.s.if_(
             $d['remove before creating'],
