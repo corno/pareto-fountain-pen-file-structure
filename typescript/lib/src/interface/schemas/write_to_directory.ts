@@ -1,4 +1,4 @@
-import * as p_ from 'pareto-core/interface/data'
+import * as p_ from 'pareto-core/interface/schema'
 
 import type * as s_remove from "./fs_unrestricted_remove.js"
 import type * as s_fp_fs from "./file-system.js"
