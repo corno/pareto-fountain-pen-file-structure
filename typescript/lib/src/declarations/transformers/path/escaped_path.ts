@@ -1,7 +1,7 @@
 
 import type * as p_ from 'pareto-core/interface/transformer'
 
-//data types
+//schemas
 import type * as s_path from "pareto-resources/interface/data/fs_unrestricted_path"
 
 
