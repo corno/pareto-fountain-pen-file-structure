@@ -1,7 +1,7 @@
 import * as p_ from 'pareto-core-shorthands/unconstrained_target'
 
 import type * as s_target from "../../interface/schemas/file-system.js"
-import type * as s_target_fp from "pareto-fountain-pen/interface/data/prose"
+import type * as s_target_fp from "../../interface/schemas/prose.js"
 
 export namespace n {
 

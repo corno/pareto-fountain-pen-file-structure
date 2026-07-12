@@ -1,8 +1,8 @@
-import type * as s_fp_block from "pareto-fountain-pen/interface/data/prose"
+import type * as s_prose from "./prose.js"
 
 export type Error = null
 
 export type Parameters = {
-    'paragraph': s_fp_block.Paragraph,
+    'paragraph': s_prose.Paragraph,
     'indentation': string,
 }

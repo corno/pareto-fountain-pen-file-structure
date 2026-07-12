@@ -1,6 +1,6 @@
 import * as p_ from 'pareto-core/interface/data'
 
-import type * as s_prose from "pareto-fountain-pen/interface/data/prose"
+import type * as s_prose from "./prose.js"
 
 
 export type Directory = p_.Dictionary<Directory__node>
