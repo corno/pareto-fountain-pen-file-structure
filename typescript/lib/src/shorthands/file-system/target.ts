@@ -1,12 +1,13 @@
+
 import * as p_ from 'pareto-core-shorthands/unconstrained_target'
+import * as p_prose from 'pareto-core/temp/fountain_pen/prose'
 
 import type * as s_target from "../../interface/schemas/file-system.js"
-import type * as s_target_fp from "../../interface/schemas/prose.js"
 
 export namespace n {
 
     export const file = (
-        $: s_target_fp.Paragraph
+        $: p_prose.Paragraph
     ): s_target.Directory__node => ['file', $]
 
     export const directory = (

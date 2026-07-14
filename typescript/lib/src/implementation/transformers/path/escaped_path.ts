@@ -19,7 +19,7 @@ namespace declarations {
 }
 
 const replace_space = ($: string): string => {
-    const replace = ($: string, search: number, replace: number): s_out.List_of_Characters => p_list_build_deprecated(
+    const replace = ($: string, search: number, replace: number): s_out.List_Of_Characters => p_list_build_deprecated(
         ($i) => {
             p_.from.list(p_list_from_text(
                 $,
